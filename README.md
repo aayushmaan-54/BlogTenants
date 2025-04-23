@@ -3,9 +3,8 @@
 
 
 ## Tech Stack
-- **Next.js**: Frontend
-- **Express.js**: Backend
-- **Prisma + NeonDB**: Database
+- **Next.js**: Frontend + Backend
+- **Prisma + NeonDB**: Database + ORM
 - **Kinde**: Auth
 
 

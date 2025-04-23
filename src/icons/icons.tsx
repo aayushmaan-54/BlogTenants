@@ -122,35 +122,194 @@ const Icons = {
   DefaultAvatar: (props: SVGProps<SVGSVGElement>) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={410}
-      height={410}
-      viewBox="0 0 410 410"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
       fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...props}
     >
-      <path
-        d="M410 205C410 91.7816 318.218 0 205 0C91.7816 0 0 91.7816 0 205C0 318.218 91.7816 410 205 410C318.218 410 410 318.218 410 205Z"
-        fill="url(#paint0_linear_12_4)"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M83.1602 332.247C110.793 293.972 155.788 269.062 206.602 269.062C256.606 269.062 300.977 293.185 328.711 330.428C296.9 361.806 253.212 381.172 205 381.172C157.727 381.172 114.802 362.552 83.1602 332.247ZM275.469 164.961C275.469 204.764 244.636 237.031 206.602 237.031C168.567 237.031 137.734 204.764 137.734 164.961C137.734 125.158 168.567 92.8906 206.602 92.8906C244.636 92.8906 275.469 125.158 275.469 164.961Z"
-        fill="white"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_12_4"
-          x1={205}
-          y1={0}
-          x2={205}
-          y2={410}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#A5ABB7" />
-          <stop offset={1} stopColor="#848B94" />
-        </linearGradient>
-      </defs>
+      <path d="M18 20a6 6 0 0 0-12 0" />
+      <circle cx={12} cy={10} r={4} />
+      <circle cx={12} cy={12} r={10} />
+    </svg>
+  ),
+
+
+  Home: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+    </svg>
+  ),
+
+
+  Globe: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <circle cx={12} cy={12} r={10} />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20" />
+    </svg>
+  ),
+
+
+  IndianRupees: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M6 3h12" />
+      <path d="M6 8h12" />
+      <path d="m6 13 8.5 8" />
+      <path d="M6 13h3" />
+      <path d="M9 13c6.667 0 6.667-10 0-10" />
+    </svg>
+  ),
+
+
+  Sun: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <circle cx={12} cy={12} r={4} />
+      <path d="M12 4h.01" />
+      <path d="M20 12h.01" />
+      <path d="M12 20h.01" />
+      <path d="M4 12h.01" />
+      <path d="M17.657 6.343h.01" />
+      <path d="M17.657 17.657h.01" />
+      <path d="M6.343 17.657h.01" />
+      <path d="M6.343 6.343h.01" />
+    </svg>
+  ),
+
+
+  MoonStar: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9" />
+      <path d="M20 3v4" />
+      <path d="M22 5h-4" />
+    </svg>
+  ),
+
+
+  MonitorCog: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 17v4" />
+      <path d="m14.305 7.53.923-.382" />
+      <path d="m15.228 4.852-.923-.383" />
+      <path d="m16.852 3.228-.383-.924" />
+      <path d="m16.852 8.772-.383.923" />
+      <path d="m19.148 3.228.383-.924" />
+      <path d="m19.53 9.696-.382-.924" />
+      <path d="m20.772 4.852.924-.383" />
+      <path d="m20.772 7.148.924.383" />
+      <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+      <path d="M8 21h8" />
+      <circle cx={18} cy={6} r={3} />
+    </svg>
+  ),
+
+
+  File: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+    </svg>
+  ),
+
+
+  CirclePlus: (props: SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <circle cx={12} cy={12} r={10} />
+      <path d="M8 12h8" />
+      <path d="M12 8v8" />
     </svg>
   ),
 }

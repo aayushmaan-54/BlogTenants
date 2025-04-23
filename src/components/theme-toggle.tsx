@@ -1,4 +1,5 @@
 "use client";
+import Icons from "@/icons/icons";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
@@ -26,13 +27,18 @@ export default function ThemeToggle() {
 
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle Theme" title={`${theme}`}>
+    <button 
+      onClick={toggleTheme} 
+      aria-label="Toggle Theme" 
+      title={`${theme}`}
+      className="text-3xl cursor-pointer flex items-center justify-center"
+    >
       {theme === "dark" ? (
-        "🌙"
+        <Icons.MoonStar className="size-7" />
       ) : theme === "light" ? (
-        "🌞"
+        <Icons.Sun className="size-8" />
       ) : (
-        `🖥️`
+        <Icons.MonitorCog className="size-7" />
       )}
     </button>
   );
