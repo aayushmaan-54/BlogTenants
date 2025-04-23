@@ -17,8 +17,8 @@ export default function DashboardPage() {
             <Icons.File className="text-primary size-10" />
           </div>
 
-          <h1 className="font-bold text-xl mb-2">You haven't created any sites yet</h1>
-          <p className="text-center text-text-muted w-[80%]">Start by creating your first site to share your content with the world. It's quick, easy, and you'll be up and running in no time.</p>
+          <h1 className="font-bold text-xl mb-2">You haven&apos;t created any sites yet</h1>
+          <p className="text-center text-text-muted w-[80%]">Start by creating your first site to share your content with the world. It&apos;s quick, easy, and you&apos;ll be up and running in no time.</p>
         </div>
       </div>
     </>
