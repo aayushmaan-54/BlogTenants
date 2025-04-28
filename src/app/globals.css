@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@import "uploadthing/tw/v4";
+@plugin "@tailwindcss/typography";
+@import "@uploadthing/react/styles.css";
 
 
 @theme {
@@ -82,4 +85,18 @@
   100% {
     transform: translateX(200%) skewX(-15deg);
   }
+}
+
+
+.input {
+  @apply border border-border px-2 py-1 rounded-md focus:outline-none focus:ring-blue-600/80 focus:ring-2;
+}
+
+.error-text {
+  @apply text-red-500 text-sm;
+}
+
+
+.logo {
+  @apply flex items-center justify-center font-monomaniac-one text-white font-bold text-2xl rounded-md size-[40px] sm:size-[45px] select-none bg-gradient-to-b from-[#007FFF] to-[#2A52BE] shadow-[inset_3px_-5px_3px_-1px_rgba(0,_0,_0,_0.7)] relative overflow-hidden ml-1;
 }

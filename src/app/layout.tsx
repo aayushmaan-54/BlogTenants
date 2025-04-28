@@ -3,8 +3,8 @@ import { Geist_Mono, Monomaniac_One } from "next/font/google";
 import cn from "@/utils/cn";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -69,7 +69,7 @@ export default function RootLayout({
         className={cn(
           geistMono.variable, monomaniacOne.variable,
           geistMono.className,
-          'antialiased bg-background text-text-primary font-geistMono flex flex-col min-h-screen'
+          'antialiased bg-background text-text-primary font-geistMono flex flex-col min-h-screen!'
         )}
       >
         <ThemeProvider
@@ -78,7 +78,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          <Toaster position="top-center" />
           <main className="flex-grow flex flex-col">
             {children}
           </main>

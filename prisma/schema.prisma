@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("NEONDB_POOL_URL")
+  directUrl = env("NEONDB_DIRECT_URL")
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  firstName       String
+  lastName        String
+  profileImageUrl String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  tenants         Tenant[] @relation("UserTenants")
+  blogs           Blog[]   @relation("UserBlogs")
+}
+
+model Tenant {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  subdomain   String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  imageUrl    String?
+  userId      String
+  user        User     @relation("UserTenants", fields: [userId], references: [id])
+  blogs       Blog[]   @relation("TenantBlogs")
+}
+
+model Blog {
+  id          String   @id @default(uuid())
+  title       String
+  content     Json
+  description String
+  imageUrl    String
+  slug        String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  tenantId    String
+  tenant      Tenant   @relation("TenantBlogs", fields: [tenantId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation("UserBlogs", fields: [userId], references: [id])
+}

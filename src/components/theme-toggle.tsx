@@ -34,11 +34,11 @@ export default function ThemeToggle() {
       className="text-3xl cursor-pointer flex items-center justify-center"
     >
       {theme === "dark" ? (
-        <Icons.MoonStar className="size-7" />
+        <Icons.MoonStar className="size-7 size-5" />
       ) : theme === "light" ? (
-        <Icons.Sun className="size-8" />
+        <Icons.Sun className="size-8 size-5" />
       ) : (
-        <Icons.MonitorCog className="size-7" />
+        <Icons.MonitorCog className="size-7 size-5" />
       )}
     </button>
   );
