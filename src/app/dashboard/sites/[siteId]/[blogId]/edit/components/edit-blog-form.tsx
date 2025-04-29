@@ -35,7 +35,7 @@ export default function EditBlogForm({ blogData, siteId }: editBlogFormProps) {
   const [title, setTitle] = useState<undefined | string>(blogData.title);
   const [slug, setSlug] = useState<undefined | string>(blogData.slug);
   const [description, setDescription] = useState<string>(blogData.description);
-  const [blogContent, setBlogContent] = useState<JSONContent | string>(blogData.content);
+  const [blogContent, setBlogContent] = useState<JSONContent | undefined>(blogData.content);
 
   const [lastResult, action] = useActionState(editBlogAction, undefined);
   const [form, fields] = useForm({
