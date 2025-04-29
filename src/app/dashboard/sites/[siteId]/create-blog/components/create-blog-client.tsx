@@ -21,7 +21,7 @@ export default function CreateBlogClient({ siteId }: { siteId: string }) {
   const [title, setTitle] = useState<undefined | string>(undefined);
   const [slug, setSlug] = useState<undefined | string>();
   const [description, setDescription] = useState<string>('');
-  const [blogContent, setBlogContent] = useState<JSONContent | string>('Type "/" to insert...');
+  const [blogContent, setBlogContent] = useState<JSONContent | undefined>();
 
   const [lastResult, action] = useActionState(createBlogAction, undefined);
   const [form, fields] = useForm({

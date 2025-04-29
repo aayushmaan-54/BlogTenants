@@ -4,7 +4,7 @@ import { defaultExtensions } from "./extensions";
 import { slashCommand, suggestionItems } from "./slash-command";
 
 interface EditorProps {
-  initialValue?: JSONContent | string;
+  initialValue?: JSONContent | undefined;
   onChagne: (value: JSONContent) => void;
 }
 
@@ -20,12 +20,13 @@ const TailwindEditor = ({
   return (
     <EditorRoot>
       <EditorContent
+        className="border border-primary/80 p-4 rounded-lg min-h-64"
         editorProps={{
           handleDOMEvents: {
             keydown: (_view, event) => handleCommandNavigation(event),
           },
           attributes: {
-            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none input max-w-full h-96`,
+            class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full`,
           },
         }}
         immediatelyRender={false}
