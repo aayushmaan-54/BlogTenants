@@ -17,7 +17,7 @@ import CodeBlock from "@tiptap/extension-code-block";
 import OrderList from "@tiptap/extension-ordered-list";
 import Bold from "@tiptap/extension-bold";
 import HardBreak from "@tiptap/extension-hard-break";
-
+import { TaskList, TaskItem } from "novel";
 
 export default function RenderBlog({ blogJson }: { blogJson: JSONContent }) {
   const output = useMemo(() => {
@@ -37,6 +37,8 @@ export default function RenderBlog({ blogJson }: { blogJson: JSONContent }) {
       OrderList,
       Bold,
       HardBreak,
+      TaskList,
+      TaskItem,
     ])
   }, [blogJson]);
 
